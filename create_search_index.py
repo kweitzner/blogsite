@@ -6,7 +6,8 @@
 
 import json
 import os
-from bs4 import BeautifulSoup
+import bs4 as bs
+
 
 
 # Takes Hugo public directory and returns all html files
@@ -21,7 +22,7 @@ def walker(path):
 
 # Takes html page and outputs json object
 def parser(page):
-    soup = BeautifulSoup(open(page, 'r'))
+    soup = bs(open(page, 'r'))
     node = {}
     try:
         node['title'] = soup.title.get_text(' ', strip=True).replace('&nbsp;', ' ').replace('^', '&#94;')
