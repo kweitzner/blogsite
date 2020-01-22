@@ -71,4 +71,4 @@ if os.path.exists('./public/tipuesearch'):
     jsoner(nodes)
     sitemaper(nodes)
 else:
-    print 'Error: place this script in hugo site root'
+    print('Error: place this script in hugo site root')
