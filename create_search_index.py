@@ -6,7 +6,7 @@
 
 import json
 import os
-import bs4 as bs
+from bs4 import BeautifulSoup as bs
 
 
 
